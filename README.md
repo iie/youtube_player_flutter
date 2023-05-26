@@ -1,3 +1,5 @@
+Esta es una versión modificada de la librería youtube_player_flutter para Flutter con la intención de utilizarla en el proyecto TEGO APP.
+
 # Youtube Player IFrame
 ![YOUTUBE PLAYER IFRAME](packages/youtube_player_flutter/misc/ypf_banner.png)
 

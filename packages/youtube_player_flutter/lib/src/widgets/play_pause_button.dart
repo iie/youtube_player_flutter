@@ -87,7 +87,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
                 ? _controller.pause()
                 : _controller.play(),
             child: Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.7),
                     shape: BoxShape.circle),
