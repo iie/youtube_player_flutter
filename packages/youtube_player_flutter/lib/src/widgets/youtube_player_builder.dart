@@ -32,6 +32,8 @@ class YoutubePlayerBuilder extends StatefulWidget {
 
 class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
     with WidgetsBindingObserver {
+  final GlobalKey playerKey = GlobalKey();
+
   @override
   void initState() {
     super.initState();
@@ -63,6 +65,7 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
   @override
   Widget build(BuildContext context) {
     final _player = Container(
+      key: playerKey,
       child: WillPopScope(
         onWillPop: () async {
           final controller = widget.player.controller;
