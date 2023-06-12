@@ -228,13 +228,14 @@ class _YoutubePlayerState extends State<YoutubePlayer> {
             .copyWith(toggleFullScreen: false, isControlsVisible: false),
       );
       if (controller.value.isFullScreen) {
-        SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+            overlays: SystemUiOverlay.values);
         SystemChrome.setPreferredOrientations([
           DeviceOrientation.portraitUp,
         ]);
         Navigator.of(context, rootNavigator: true).pop();
       } else {
-        SystemChrome.setEnabledSystemUIOverlays([]);
+        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
         controller.pause();
         var _cachedPosition = controller.value.position;
         var _videoId = controller.metadata.videoId;
